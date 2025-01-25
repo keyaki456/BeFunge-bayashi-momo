@@ -28,8 +28,8 @@ df = pd.DataFrame(
    ]
 )
 
+current_cell=df[0,0]
 st.table(df)
-
 
 if on:
     while current_cell != "おわり":
