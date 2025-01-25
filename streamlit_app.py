@@ -28,8 +28,9 @@ df = pd.DataFrame(
    ]
 )
 
-current_cell=df[0,0]
+current_cell=df.loc[now_location_y,str(now_location_x)]
 st.table(df)
+current_cell
 
 if on:
     while current_cell != "おわり":
