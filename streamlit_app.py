@@ -33,7 +33,7 @@ now_cell=df.loc[now_location_y,str(now_location_x)]
 st.table(df)
 
 if on:
-    while now_cell != "おわり":
+    while 1:
         time.sleep(0.1)
         if now_cell == "みぎ":
             now_direction=0
@@ -51,6 +51,8 @@ if on:
             now_direction=3
             now_location_x = now_location_x + 0
             now_location_y = now_location_y - 1
+        if now_cell == "おわり":
+            break
 
 
     st.title("出力")
