@@ -34,27 +34,30 @@ st.table(df)
 now_cell
 
 if on:
-    while 1:
+    while now_cell != "おわり":
         time.sleep(0.1)
+        now_cell=df.loc[now_location_y,str(now_location_x)]
         if now_cell == "みぎ":
             now_direction=0
+        elif now_cell == "した":
+            now_direction=1
+        elif now_cell == "ひだり":
+            now_direction=2
+        elif now_cell == "うえ":
+            now_direction=3
+
+        if now_direction == 0:
             now_location_x = now_location_x + 1
             now_location_y = now_location_y + 0
-        if now_cell == "した":
-            now_direction=1
+        elif now_direction == 1:
             now_location_x = now_location_x + 0
             now_location_y = now_location_y + 1
-        if now_cell == "ひだり":
-            now_direction=2
+        elif now_direction == 2:
             now_location_x = now_location_x - 1
             now_location_y = now_location_y + 0
-        if now_cell == "うえ":
-            now_direction=3
+        elif now_direction == 2:
             now_location_x = now_location_x + 0
             now_location_y = now_location_y - 1
-        if now_cell == "おわり":
-            break
-
 
     st.title("出力")
     st.write(output)
