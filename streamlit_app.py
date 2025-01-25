@@ -4,9 +4,9 @@ import time
 
 on = st.toggle("←runボタン。これがonの間、有林が働き続ける。")
 output=""
-now_location_x=0
-now_location_y=0
-now_direction=0 #0が右、1が下、2が左、3が上
+now_location_x = 0
+now_location_y = 0
+now_direction  = 0 #0が右、1が下、2が左、3が上
 
 df = pd.DataFrame(
     [
@@ -31,7 +31,6 @@ df = pd.DataFrame(
 
 now_cell=df.loc[now_location_y,str(now_location_x)]
 st.table(df)
-now_cell
 
 if on:
     while now_cell != "おわり":
