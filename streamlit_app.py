@@ -31,6 +31,7 @@ df = pd.DataFrame(
 
 now_cell=df.loc[now_location_y,str(now_location_x)]
 st.table(df)
+now_cell
 
 if on:
     while 1:
