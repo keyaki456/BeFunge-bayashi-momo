@@ -7,13 +7,18 @@ output=""
 now_location_x=0
 now_location_y=0
 
-l = [["みぎ", "", "した"], ["", "", ""], ["", "おわり", "ひだり"]]
+df = pd.DataFrame(
+    [
+       {"0": "", "1": "", "2": "", "3": "", "4": "", "5": "", "6": "", "7": "", "8": "", "9": "", "10": "", "11": "", "12": "", "13": "", "14": "", "15": "", "16": ""},
+   ]
+)
 
-edited_df = st.data_editor(l,num_rows='dynamic')
+edited_df = st.data_editor(df,num_rows='dynamic')
 
 
 if on:
-    time.sleep(0.1)
+    while current_cell != "おわり":
+        time.sleep(0.1)
 
 
 
